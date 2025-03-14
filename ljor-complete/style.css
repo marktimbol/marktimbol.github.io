@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    font-size: 36px;   
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+    background-color: rgba(114,10,157,.6);
+}
+header::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(128, 0, 128, 0.4);
+}
+
+header .top-nav {
+    height: 80px;
+    z-index: 9999;
+    position: relative;
+
+    /* background-color: #3b0764; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;        
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;       
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 2px;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+header nav ul li a:hover {
+    background-color: teal;
+}
+
+
+header .video-container video {
+    position: absolute;
+    top: 0;
+}
+
+
+header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header .hero-content {
+    position: relative;
+    z-index: 9999;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .hero-content h2 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header .hero-content div {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
+header .hero-content a.filled {
+    border: 2px solid teal;
+    background-color: teal;
+}
+
+header .hero-content a {
+    border: 2px solid teal;
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+section .section-header {
+    text-align: center;
+    margin:60px 0;
+}
+
+section .section-header.text-left {
+    text-align: left;
+}
+
+section .section-header h2 {
+    margin-bottom: 20px;
+}
+
+section .section-header p {
+    line-height: 200%;
+    font-size: 18px;
+    color: lightslategray;
+}
+
+section .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+section .card-item {
+    padding: 40px;
+    transition: all 200ms ease-in-out;
+}
+section .card-item h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
+section .card-item p {
+    color: lightslategray;
+    line-height: 200%;
+    margin: 20px 0;
+}
+
+section .card-item a {
+    color: teal;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section .card-item:hover {
+    background-color: rgba(0, 128, 128, 0.1);
+}
+section .card-item:hover a {
+    text-decoration: underline;
+}
+
+.ministries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.ministries .ministry-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.ministries .ministry-item .ministry-item__title {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+
+    background: rgb(0,0,0);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); 
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 40px 0;
+    color: white;
+}
+
+.ministries .ministry-item .ministry-item__title h4 {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+.ministries .ministry-item .ministry-item__title small {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.ministries .ministry-item img {
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.tab-container .tab-headers {
+    display: flex;
+    justify-content: center;
+}    
+
+.tab-container .tab-headers button {    
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border: 1px solid lightslategray;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 0 5px;
+}
+
+.tab-container .tab-headers button:hover, .tab-container .tab-headers button.active {
+    background: teal;
+    color: white;
+}
+
+.tab-container .tab-content {
+    margin-top: 40px;
+}
+.tab-container .tab-panel {
+    display: none;
+}
+
+.tab-container .tab-panel.active {
+    display: block;
+}
+
+.tab-container .tab-panel .tab-panel-image-container {
+    display: flex;
+    justify-content: center;
+}
+    
+.tab-container .tab-panel .tab-panel-churches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tab-panel-churches h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: lightslategray;
+    margin-bottom: 20px;
+}
+
+.tab-panel-churches ul {
+    line-height: 200%;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: black;
+    padding: 100px 0;
+    color: white;
+}
+
+footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    line-height: 200%;
+}
+
+footer p {
+    list-style: none;
+    line-height: 200%;
+    color: lightgrey;
+}
+
+footer a {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: teal;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
